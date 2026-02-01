@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>I'm Sorry 💕</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', 'Poppins', cursive;
+      background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      width: 320px;
+      animation: pop 0.6s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      color: #ff4f9a;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    button {
+      margin: 12px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .yes {
+      background: #ff4f9a;
+      color: white;
+    }
+
+    .yes:hover {
+      transform: scale(1.1);
+    }
+
+    .no {
+      background: #eee;
+    }
+
+    .hearts {
+      position: absolute;
+      font-size: 24px;
+      animation: float 4s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-120vh); }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card" id="card">
+  <h1>I'm really sorry 🥺</h1>
+  <p>Will you forgive me?</p>
+  <button class="yes" onclick="forgive()">Yes 💕</button>
+  <button class="no">Hmm…</button>
+</div>
+
+<script>
+  function forgive() {
+    document.body.innerHTML = `
+      <div class="card">
+        <h1>Thank youuu 💖</h1>
+        <p>You just made my heart happy 🌸</p>
+        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="200"/>
+        <p>You're the cutest 😭💕</p>
+      </div>
+    `;
+
+    for (let i = 0; i < 20; i++) {
+      let heart = document.createElement("div");
+      heart.className = "hearts";
+      heart.innerHTML = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (2 + Math.random() * 3) + "s";
+      document.body.appendChild(heart);
+    }
+  }
+</script>
+
+</body>
+</html>
