@@ -1,111 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>I'm Sorry 💕</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Comic Sans MS', 'Poppins', cursive;
-      background: linear-gradient(135deg, #ffd6e8, #ffeef6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Avvu 💖</title>
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 25px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-      width: 320px;
-      animation: pop 0.6s ease;
-    }
+<style>
+:root {
+  --pink: #ff5fa2;
+}
 
-    @keyframes pop {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+* {
+  box-sizing: border-box;
+}
 
-    h1 {
-      color: #ff4f9a;
-      margin-bottom: 10px;
-    }
+body {
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(160deg, #ffd6e8, #fff3f9);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
 
-    p {
-      color: #555;
-      font-size: 16px;
-    }
+.card {
+  background: white;
+  border-radius: 30px;
+  padding: 26px;
+  width: 92%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  animation: pop 0.6s ease;
+}
 
-    button {
-      margin: 12px;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 20px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 
-    .yes {
-      background: #ff4f9a;
-      color: white;
-    }
+h1 {
+  color: var(--pink);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
 
-    .yes:hover {
-      transform: scale(1.1);
-    }
+p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
 
-    .no {
-      background: #eee;
-    }
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border-radius: 22px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
 
-    .hearts {
-      position: absolute;
-      font-size: 24px;
-      animation: float 4s linear infinite;
-      opacity: 0.7;
-    }
+.yes {
+  background: var(--pink);
+  color: white;
+}
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-120vh); }
-    }
-  </style>
+.yes:active {
+  transform: scale(0.96);
+}
+
+.no {
+  background: #eee;
+}
+
+.floating {
+  position: fixed;
+  bottom: -30px;
+  font-size: 22px;
+  animation: floatUp linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+.gif {
+  width: 180px;
+  border-radius: 16px;
+  margin: 14px 0;
+}
+</style>
 </head>
 
 <body>
 
 <div class="card" id="card">
-  <h1>I'm really sorry 🥺</h1>
-  <p>Will you forgive me?</p>
-  <button class="yes" onclick="forgive()">Yes 💕</button>
-  <button class="no">Hmm…</button>
+  <h1>Hey Avvu 🥺</h1>
+
+  <p>
+    It’s me… and I just wanted to say this properly.
+    I know I hurt you, and I know saying “sorry” is not always enough.
+  </p>
+
+  <p>
+    But you matter to me a lot, Cutuu.
+    Your feelings, your smile, your presence —
+    all of it means more to me than you probably realise.
+  </p>
+
+  <p>
+    I never wanted to be the reason you felt bad,
+    and I truly regret it from my heart.
+  </p>
+
+  <button class="yes" onclick="forgive()">Will you forgive me? 💖</button>
+  <button class="no">I need some time 😶</button>
 </div>
 
 <script>
-  function forgive() {
-    document.body.innerHTML = `
-      <div class="card">
-        <h1>Thank youuu 💖</h1>
-        <p>You just made my heart happy 🌸</p>
-        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="200"/>
-        <p>You're the cutest 😭💕</p>
-      </div>
-    `;
+function forgive() {
+  document.getElementById("card").innerHTML = `
+    <h1>Thank you, Avvu 💕</h1>
 
-    for (let i = 0; i < 20; i++) {
-      let heart = document.createElement("div");
-      heart.className = "hearts";
-      heart.innerHTML = "💖";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = (2 + Math.random() * 3) + "s";
-      document.body.appendChild(heart);
-    }
+    <p>
+      You have no idea how relieved and grateful I feel.
+      Your forgiveness means the world to me, Cutuu.
+    </p>
+
+    <img class="gif" src="https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif">
+
+    <p>
+      I promise to be more careful,
+      more understanding,
+      and to never take you for granted.
+    </p>
+
+    <p>
+      Thank you for being you 🌸  
+      You’re truly special to me.
+      I love you the most jaanaaaaa💋💋
+    </p>
+  `;
+
+  for (let i = 0; i < 30; i++) {
+    let el = document.createElement("div");
+    el.className = "floating";
+    el.innerHTML = ["💖","✨","🌸","💕","🫶"][Math.floor(Math.random()*5)];
+    el.style.left = Math.random() * 100 + "vw";
+    el.style.animationDuration = (3 + Math.random()*3) + "s";
+    document.body.appendChild(el);
   }
+}
 </script>
 
 </body>
